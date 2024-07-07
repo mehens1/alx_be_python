@@ -5,12 +5,12 @@ def display_menu():
   print("3. View List")
   print("4. Exit")
 
-
 def main():
   shopping_list = []
   while True:
     display_menu()
     choice = input("Enter your choice: ").strip()
+    
     if choice == '1':
       item = input("Enter the item to add: ").strip()
       shopping_list.append(item)
