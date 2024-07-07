@@ -5,6 +5,7 @@ def display_menu():
   print("3. View List")
   print("4. Exit")
 
+
 def main():
   shopping_list = []
   while True:
@@ -21,17 +22,17 @@ def main():
         print(f"'{item}' has been removed from the list.")
       else:
         print(f"'{item}' not found in the list.")
-      elif choice == '3':
-        if shopping_list:
-          print("\nCurrent Shopping List:")
-          for idx, item in enumerate(shopping_list, start=1):
-            print(f"{idx}. {item}")
-        else:
-          print("The shopping list is currently empty.")
-        elif choice == '4':
-          print("Goodbye!")
-          break
+    elif choice == '3':
+      if shopping_list:
+        print("\nCurrent Shopping List:")
+        for idx, item in enumerate(shopping_list, start=1):
+          print(f"{idx}. {item}")
+      else:
+        print("The shopping list is currently empty.")
+    elif choice == '4':
+      print("Goodbye!")
+      break
     else:
-        print("Invalid choice. Please try again.")
+      print("Invalid choice. Please try again.")
 if __name__ == "__main__":
   main()
